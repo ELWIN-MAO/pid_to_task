@@ -1,0 +1,1 @@
+cmd_/home/abc/kernel-test/devmod/kmod6/print_pid.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/abc/kernel-test/devmod/kmod6/print_pid.ko /home/abc/kernel-test/devmod/kmod6/print_pid.o /home/abc/kernel-test/devmod/kmod6/print_pid.mod.o
