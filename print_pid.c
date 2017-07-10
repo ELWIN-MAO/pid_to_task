@@ -22,7 +22,7 @@ static ssize_t word_count_read(struct file *file, char __user *buf, size_t count
     if(read_flag == 'n')    
     {       
         //  将内核空间的数据复制到用户空间，buf中的数据就是从设备文件中读出的数据    
-        copy_to_user(buf, (void*) mem, written_count);    
+        copy_to_user(buf, (void*) mem, written_count+1);    
         //  向日志输出已读取的字节数    
         printk("read count:%d\n", (int) written_count);    
         //  设置数据已读状态    
@@ -41,20 +41,20 @@ static ssize_t word_count_write(struct file *file, const char __user *buf, size_
 {       
     //  将用户空间的数据复制到内核空间，mem中的数据就是向设备文件写入的数据    
     copy_from_user(mem, buf, count);    
+    mem[count+1]='\0';    
     //  设置数据的未读状态    
     read_flag = 'n';    
     //  保存写入数据的字节数   
-    mem[20] = '\0'; 	
-    written_count = strlen(mem);    
+    written_count = count;    
     //  向日志输出已写入的字节数    
     printk("written count:%d\n", (int)count);  
     printk("content:%s\n", mem);	
     sscanf(mem,"%d", &apid);
-    sprintf(mem, "%d",apid);
     printk("int_content:%d\n", apid);
     p = pid_task(find_vpid(apid), PIDTYPE_PID);
     printk("%d---->%s\n",p->pid,p->comm);
-    sprintf(mem,"%d---->%s\n",p->pid,p->comm);
+    memset ((void*) mem, 0,1000);
+    sprintf(mem,"%s\n",p->comm);
     written_count = strlen(mem);
 	
     return count;    
