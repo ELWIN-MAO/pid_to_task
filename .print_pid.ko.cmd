@@ -1,1 +1,1 @@
-cmd_/home/elwin/strace/pid_to_task/print_pid.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/elwin/strace/pid_to_task/print_pid.ko /home/elwin/strace/pid_to_task/print_pid.o /home/elwin/strace/pid_to_task/print_pid.mod.o
+cmd_/home/elwin/strace/pid_to_task/print_pid.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/elwin/strace/pid_to_task/print_pid.ko /home/elwin/strace/pid_to_task/print_pid.o /home/elwin/strace/pid_to_task/print_pid.mod.o ;  true
