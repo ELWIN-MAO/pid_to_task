@@ -17,18 +17,16 @@ __attribute__((section(".gnu.linkonce.this_module"))) = {
 static const struct modversion_info ____versions[]
 __used
 __attribute__((section("__versions"))) = {
-	{ 0x63dc1bdf, __VMLINUX_SYMBOL_STR(module_layout) },
-	{ 0x9525f01b, __VMLINUX_SYMBOL_STR(misc_deregister) },
-	{ 0x1766edc9, __VMLINUX_SYMBOL_STR(misc_register) },
+	{ 0xa2f7d132, __VMLINUX_SYMBOL_STR(module_layout) },
+	{ 0x4257b26f, __VMLINUX_SYMBOL_STR(misc_deregister) },
+	{ 0xd1e49ac1, __VMLINUX_SYMBOL_STR(misc_register) },
 	{ 0x4f8b5ddb, __VMLINUX_SYMBOL_STR(_copy_to_user) },
-	{ 0x1e047854, __VMLINUX_SYMBOL_STR(warn_slowpath_fmt) },
 	{ 0x91715312, __VMLINUX_SYMBOL_STR(sprintf) },
-	{ 0xbf4840c9, __VMLINUX_SYMBOL_STR(pid_task) },
-	{ 0x8d011ed4, __VMLINUX_SYMBOL_STR(find_vpid) },
+	{ 0x57265882, __VMLINUX_SYMBOL_STR(pid_task) },
+	{ 0x737d8afe, __VMLINUX_SYMBOL_STR(find_vpid) },
 	{ 0x20c55ae0, __VMLINUX_SYMBOL_STR(sscanf) },
 	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
 	{ 0x4f6b400b, __VMLINUX_SYMBOL_STR(_copy_from_user) },
-	{ 0x88db9f48, __VMLINUX_SYMBOL_STR(__check_object_size) },
 	{ 0xbdfb6dbb, __VMLINUX_SYMBOL_STR(__fentry__) },
 };
 
@@ -37,3 +35,5 @@ __used
 __attribute__((section(".modinfo"))) =
 "depends=";
 
+
+MODULE_INFO(srcversion, "C51C8F8230746707B23DE8E");
