@@ -54,16 +54,16 @@ static ssize_t word_count_write(struct file *file, const char __user *buf, size_
     p = pid_task(find_vpid(apid), PIDTYPE_PID);
     if(p!=NULL)
     {
-    printk("%d---->%s\n",p->pid,p->comm);
+    printk("%d,%d---->%s\n",p->pid,p->tgid,p->comm);
     memset ((void*) mem, 0,1000);
-    sprintf(mem,"%s\n",p->comm);
+    sprintf(mem,"%d,%s\n",p->tgid,p->comm);
     written_count = strlen(mem);
     }
     else
     {
-    printk("%d---->%s\n",apid,"NULL");
+    printk("%d,%d---->%s\n",apid,0,"NULL");
     memset ((void*) mem, 0,1000);
-    sprintf(mem,"%s\n","NULL");
+    sprintf(mem,"%d,%s\n",0,"NULL");
     written_count = strlen(mem);
     }
 	
