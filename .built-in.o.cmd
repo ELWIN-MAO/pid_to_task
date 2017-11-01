@@ -1,1 +1,0 @@
-cmd_/home/elwin/linux_vmwaredata/mypaper_vmware/uuu/strace_code/pid_to_task/built-in.o :=  rm -f /home/elwin/linux_vmwaredata/mypaper_vmware/uuu/strace_code/pid_to_task/built-in.o; ar rcsD /home/elwin/linux_vmwaredata/mypaper_vmware/uuu/strace_code/pid_to_task/built-in.o
