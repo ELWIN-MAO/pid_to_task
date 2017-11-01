@@ -63,7 +63,7 @@ static ssize_t word_count_write(struct file *file, const char __user *buf, size_
     {
     printk("%d,%d---->%s\n",apid,0,"NULL");
     memset ((void*) mem, 0,1000);
-    sprintf(mem,"%d,%s\n",0,"NULL");
+    sprintf(mem,"%d , %s\n",0,"NULL");
     written_count = strlen(mem);
     }
 	
