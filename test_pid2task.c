@@ -11,7 +11,7 @@ static char receive[BUFFER_LENGTH];     ///< The receive buffer from the LKM
 int main(){
    int ret, fd;
    char stringToSend[BUFFER_LENGTH];
-   fd = open("/dev/wordcount", O_RDWR);             // Open the device with read/write access
+   fd = open("/dev/pid2task", O_RDWR);             // Open the device with read/write access
    if (fd < 0){
       perror("Failed to open the device...");
       return errno;
